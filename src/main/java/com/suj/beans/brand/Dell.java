@@ -5,16 +5,20 @@ import com.suj.interfaces.IMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 import static com.suj.app.LaptopApp.log;
 
 @Component
+@Service(value = "dellLaptop")
 public class Dell implements ILaptop {
     //Mapping of monitor object
     @Autowired
     //Default value of monitor
-    @Qualifier (value = "LCD")
-//    @Qualifier ("${laptop.processor}")
+//    @Qualifier (value = "LCD")
+    @Resource(name = "${laptop.monitor}")
     IMonitor monitor;
 
     //Returns the monitor

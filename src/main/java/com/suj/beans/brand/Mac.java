@@ -5,10 +5,12 @@ import com.suj.interfaces.IMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import static com.suj.app.LaptopApp.log;
 
 @Component
+@Service(value = "macLaptop")
 public class Mac implements ILaptop {
     @Autowired
     @Qualifier(value = "LED")

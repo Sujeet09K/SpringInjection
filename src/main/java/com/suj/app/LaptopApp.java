@@ -6,9 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.Properties;
 
 public class LaptopApp {
     public static final Logger log = LoggerFactory.getLogger(LaptopApp.class);
@@ -26,5 +25,7 @@ public class LaptopApp {
         laptop.getLaptop();
         laptop.getMonitor().getMonitor();
 
+
     }
+
 }
