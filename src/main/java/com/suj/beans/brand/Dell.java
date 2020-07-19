@@ -14,6 +14,7 @@ public class Dell implements ILaptop {
     @Autowired
     //Default value of monitor
     @Qualifier (value = "LCD")
+//    @Qualifier ("${laptop.processor}")
     IMonitor monitor;
 
     //Returns the monitor

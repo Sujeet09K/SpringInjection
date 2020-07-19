@@ -12,6 +12,7 @@ import static com.suj.app.LaptopApp.log;
 public class LCD implements IMonitor {
 
     @Autowired
+    @Qualifier (value = "dualCore")
     IProcessors processors;
 
     public void getMonitor() {
