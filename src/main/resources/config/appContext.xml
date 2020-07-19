@@ -9,6 +9,6 @@
            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <context:component-scan base-package="com.suj.beans"/>
-    <context:property-placeholder location="classpath*:config/appConfig.properties"/>
+<!--    <context:property-placeholder location="classpath*:config/appConfig.properties"/>-->
 <!--    <bean id="${laptop.monitor}" class="com.suj.beans.monitor.LCD"/>-->
 </beans>

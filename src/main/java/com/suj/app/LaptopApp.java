@@ -24,7 +24,7 @@ public class LaptopApp {
         laptop = (ILaptop) applicationContext.getBean(beanName);
         laptop.getLaptop();
         laptop.getMonitor().getMonitor();
-
+        System.exit(0);
 
     }
 

@@ -9,6 +9,7 @@ Annotations Used :
 @Autowire : This will automatically map the bean with the variable
 @Qualifier : Name the bean
 @Resource : Name of the bean from properties file
+@PropertySource : Property file details
 @Bean : Mark the function to return the bean
 @Lazy : Lazy initialization
 @Value : Default value
