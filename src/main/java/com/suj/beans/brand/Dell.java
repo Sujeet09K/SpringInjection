@@ -1,15 +1,27 @@
 package com.suj.beans.brand;
 
-import com.suj.interfaces.IChild;
+import com.suj.interfaces.ILaptop;
+import com.suj.interfaces.IMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
-public class Dell implements IChild {
-    @Autowired
-    Dell childclass1;
+import static com.suj.app.LaptopApp.log;
 
-    public void printMessage() {
-        System.out.println("printMessage : ChildClass1"+childclass1.getClass());
+@Component
+public class Dell implements ILaptop {
+    //Mapping of monitor object
+    @Autowired
+    //Default value of monitor
+    @Qualifier (value = "LCD")
+    IMonitor monitor;
+
+    //Returns the monitor
+    public IMonitor getMonitor() {
+        return monitor;
+    }
+
+    public void getLaptop() {
+        log.info("getProcessor : {}", this.getClass().getCanonicalName());
     }
 }

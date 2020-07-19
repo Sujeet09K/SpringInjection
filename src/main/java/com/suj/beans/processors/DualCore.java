@@ -1,15 +1,15 @@
 package com.suj.beans.processors;
 
-import com.suj.interfaces.IChild;
+import com.suj.interfaces.IProcessors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-public class DualCore implements IChild {
-    @Autowired
-    DualCore childclass1;
+import static com.suj.app.LaptopApp.log;
 
-    public void printMessage() {
-        System.out.println("printMessage : ChildClass1"+childclass1.getClass());
+@Component
+public class DualCore implements IProcessors {
+
+    public void getProcessor() {
+        log.info("getProcessor : {}", this.getClass().getCanonicalName());
     }
 }
